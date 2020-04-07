@@ -431,6 +431,27 @@
     \triangleap{A}{180}{}{}
   \end{tikzpicture}}
 
+\newcommand{\triangleequilateraldeux}
+{\begin{tikzpicture}[x=1.0cm,y=1.0cm]
+    \clip(-3,-3) rectangle (3,5);
+    \coordinate (A) at (0.5,1);
+    \trianglec{A}{30}{}{}
+    \trianglecp{A}{-30}{}{}
+    \triangleb{A}{-60}{B}{}
+    \trianglebp{A}{60}{C}{}
+    \trianglec{B}{30}{}{}
+    \trianglecp{C}{-30}{}{}
+
+	\trianglecp{B}{210}{}{}
+	\trianglec{B}{270}{}{}
+	
+	\trianglec{C}{150}{}{}
+	\trianglecp{C}{90}{}{}	
+	
+	\trianglec{C}{270}{}{}
+	\triangleap{C}{0}{}{}
+  \end{tikzpicture}}
+
 \newcommand{\vide}
 {\begin{tikzpicture}[x=1.0cm,y=1.0cm]
     \clip(-3,-3) rectangle (3,5);
@@ -441,7 +462,7 @@
 \noindent
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
-  \chapeau
+  \triangleequilateraldeux
 \end{minipage}
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
