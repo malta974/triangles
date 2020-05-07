@@ -39,6 +39,27 @@
 
 \newcommand{\trianglecp}[5][1.5]{\draw[blanc!80,fill=bleu!80,rotate = #3,scale=#1](#2)--++(-0.75,0)node(#4){}--++(0,1.3)node(#5){}--++(0.75,-1.3);}
 
+
+\newcommand{\bateau}
+{\begin{tikzpicture}[x=1.0cm,y=1.0cm]
+    \clip(-3,-3) rectangle (3,5);
+    \coordinate (A) at (0.5,1);
+    \triangleb{A}{90}{}{}
+    \triangleb{A}{-90}{}{}
+    \trianglebp{A}{90}{B}{}
+    \trianglebp{A}{-90}{}{}
+    
+    \trianglea{B}{0}{}{}
+    \trianglea{B}{-30}{}{}
+
+    \triangleap{B}{180}{}{}
+    \triangleap{B}{210}{}{}
+    
+    \trianglecp{B}{-270}{}{}
+    \trianglec{B}{270}{}{}
+  \end{tikzpicture}}
+
+
 \newcommand{\losange}
 {\begin{tikzpicture}[x=1.0cm,y=1.0cm]
     \clip(-3,-3) rectangle (3,5);
@@ -289,24 +310,6 @@
     \trianglea{C}{75}{}{}
   \end{tikzpicture}}
  
-\newcommand{\bateau}
-{\begin{tikzpicture}[x=1.0cm,y=1.0cm]
-    \clip(-3,-3) rectangle (3,5);
-    \coordinate (A) at (0.5,1);
-    \triangleb{A}{90}{}{}
-    \triangleb{A}{-90}{}{}
-    \trianglebp{A}{90}{B}{}
-    \trianglebp{A}{-90}{}{}
-    
-    \trianglea{B}{0}{}{}
-    \trianglea{B}{-30}{}{}
-
-    \triangleap{B}{180}{}{}
-    \triangleap{B}{210}{}{}
-    
-    \trianglecp{B}{-270}{}{}
-    \trianglec{B}{270}{}{}
-  \end{tikzpicture}}
 
 \newcommand{\casque}
 {\begin{tikzpicture}[x=1.0cm,y=1.0cm]
@@ -450,6 +453,16 @@
 	
 	\trianglec[#1]{C}{270}{}{}
 	\triangleap[#1]{C}{0}{}{}
+  \end{tikzpicture}}
+  
+ \newcommand{\fuseeThomas}
+{\begin{tikzpicture}[x=1.0cm,y=1.0cm]
+    \clip(-3,-3) rectangle (3,5);
+    \coordinate (A) at (0,0);
+    \trianglec{A}{30}{}{}
+    \trianglecp{A}{-30}{}{}
+    \trianglec{A}{150}{}{}
+    \trianglecp{A}{210}{}{}    
   \end{tikzpicture}}
 
 \newcommand{\vide}
@@ -747,7 +760,7 @@
   \end{minipage}
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
-  \vide
+  \fuseeThomas
   \end{minipage}
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
@@ -795,12 +808,11 @@
 \end{minipage}
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
-  \vide
+  \fuseeThomas
 \end{minipage}
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
-    \triangleequilateraldeux{1.3}
-
+   \triangleequilateraldeux{1.3}
 \end{minipage}
 \vrule
 \hrule
