@@ -465,6 +465,24 @@
     \trianglecp{A}{210}{}{}    
   \end{tikzpicture}}
 
+  \newcommand{\soleil}
+{\begin{tikzpicture}[x=1.0cm,y=1.0cm]
+    \clip(-3,-3) rectangle (3.3,5);
+    \coordinate (A) at (0.5,2.5);
+    \triangleb{A}{-150}{B}{}
+    \triangleb{A}{-30}{}{}
+    \triangleb{B}{-90}{C}{}
+    \triangleb{B}{30}{}{}
+    \triangleb{C}{90}{}{}
+    \triangleb{C}{-30}{D}{}
+    \triangleb{D}{30}{E}{}
+    \triangleb{D}{150}{}{}
+    \triangleb{E}{90}{F}{}
+    \triangleb{E}{210}{}{}
+    \triangleb{F}{150}{G}{}
+    \triangleb{F}{270}{}{}
+  \end{tikzpicture}}
+
 \newcommand{\vide}
 {\begin{tikzpicture}[x=1.0cm,y=1.0cm]
     \clip(-3,-3) rectangle (3,5);
@@ -531,7 +549,7 @@
 \end{minipage}
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
-  \chapeau
+\chapeau
 \end{minipage}
 \vrule
 \hrule
@@ -764,11 +782,11 @@
   \end{minipage}
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
-  \vide
+  \soleil
   \end{minipage}
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
-  \vide
+  \soleil
 \end{minipage}
 \vrule
 \hrule
@@ -800,11 +818,11 @@
 \noindent
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
-  \vide
+  \soleil
 \end{minipage}
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
-  \vide
+  \soleil
 \end{minipage}
 \vrule
 \begin{minipage}[t][9.3cm][t]{6.8cm}
